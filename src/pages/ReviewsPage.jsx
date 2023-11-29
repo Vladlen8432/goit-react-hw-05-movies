@@ -1,7 +1,7 @@
 const ReviewsPage = () => {
   return (
     <div>
-      
+      Review
     </div>
   )
 }
