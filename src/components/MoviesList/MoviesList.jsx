@@ -1,20 +1,41 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation } from 'react-router-dom';
 
-const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=500x250'
+const defaultImg =
+  'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=500x250';
 
-const MoviesList = ({movies}) => {
-    const location = useLocation()
-    
+const MoviesList = ({ movies }) => {
+  const location = useLocation();
+
   return (
     <ul>
-        {movies.map(({id, title, name, original_title, poster_path}) => (
-            <Link state={{from: location}} key={id} to={`/movies/${id}`}><li>
-            <img src={poster_path?`https://image.tmdb.org/t/p/w300/${poster_path}` : defaultImg} alt={title || name || original_title}/>
+      <li>
+        {movies.map(({ id, title, name, original_title, poster_path }) => (
+          <Link state={{ from: location }} key={id} to={`/movies/${id}`}>
+            <img
+              src={
+                poster_path
+                  ? `https://image.tmdb.org/t/p/w300/${poster_path}`
+                  : defaultImg
+              }
+              alt={title || name || original_title}
+            />
             <h2>{title || name || original_title}</h2>
-        </li></Link>
+          </Link>
         ))}
+      </li>
     </ul>
-  )
-}
+  );
 
-export default MoviesList
+  // return (
+  //   <ul>
+  //       {movies.map(({id, title, name, original_title, poster_path}) => (
+  //           <Link state={{from: location}} key={id} to={`/movies/${id}`}><li>
+  //           <img src={poster_path?`https://image.tmdb.org/t/p/w300/${poster_path}` : defaultImg} alt={title || name || original_title}/>
+  //           <h2>{title || name || original_title}</h2>
+  //       </li></Link>
+  //       ))}
+  //   </ul>
+  // )
+};
+
+export default MoviesList;

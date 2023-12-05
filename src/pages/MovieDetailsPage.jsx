@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieDetails } from '../services/Api';
-import CastPage from './CastPage';
-import ReviewsPage from './ReviewsPage';
+// import CastPage from './CastPage';
+// import ReviewsPage from './ReviewsPage';
 
 const MovieDetailsPage = () => {
   const { id } = useParams();
@@ -35,8 +35,8 @@ const MovieDetailsPage = () => {
       <p>Vote Average: {movieDetails.vote_average}</p>
       <p>Runtime: {movieDetails.runtime} minutes</p>
 
-      <CastPage movieId={id} />
-      <ReviewsPage movieId={id} />
+      {/* <CastPage movieId={id} />
+      <ReviewsPage movieId={id} /> */}
     </div>
   );
 };
