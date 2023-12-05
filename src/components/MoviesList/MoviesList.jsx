@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 
-const defaultImg = 'IMG'
-// const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
+const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=500x250'
 
 const MoviesList = ({movies}) => {
     const location = useLocation()
