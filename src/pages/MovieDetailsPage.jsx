@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieDetails } from '../services/Api';
-// import CastPage from './CastPage';
-// import ReviewsPage from './ReviewsPage';
+import CastPage from './CastPage';
+import ReviewsPage from './ReviewsPage';
 
 const MovieDetailsPage = () => {
   const { id } = useParams();
@@ -28,17 +28,39 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <h1>{movieDetails.title}</h1>
-      <p>{movieDetails.overview}</p>
+      {movieDetails ? (
+        <div>
+          <h2>{movieDetails.title}</h2>
+          <img
+            src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`}
+            alt={movieDetails.title}
+          />
+          <p>{movieDetails.overview}</p>
+          <p>Release Date: {movieDetails.release_date}</p>
+          <p>Vote Average: {movieDetails.vote_average}</p>
 
-      <p>Release Date: {movieDetails.release_date}</p>
-      <p>Vote Average: {movieDetails.vote_average}</p>
-      <p>Runtime: {movieDetails.runtime} minutes</p>
-
-      {/* <CastPage movieId={id} />
-      <ReviewsPage movieId={id} /> */}
+          <CastPage movieId={id} />
+          <ReviewsPage movieId={id} />
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
+
+  // return (
+  //   <div>
+  //     <h1>{movieDetails.title}</h1>
+  //     <p>{movieDetails.overview}</p>
+
+  //     <p>Release Date: {movieDetails.release_date}</p>
+  //     <p>Vote Average: {movieDetails.vote_average}</p>
+  //     <p>Runtime: {movieDetails.runtime} minutes</p>
+
+  //     <CastPage movieId={id} />
+  //     <ReviewsPage movieId={id} />
+  //   </div>
+  // );
 };
 
 export default MovieDetailsPage;
