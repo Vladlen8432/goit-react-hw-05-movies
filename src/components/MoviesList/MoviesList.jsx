@@ -8,8 +8,8 @@ const MoviesList = ({ movies }) => {
 
   return (
     <ul>
-      <li>
-        {movies.map(({ id, title, name, original_title, poster_path }) => (
+      {movies.map(({ id, title, name, original_title, poster_path }) => (
+        <li key={id}>
           <Link state={{ from: location }} key={id} to={`/movies/${id}`}>
             <img
               src={
@@ -21,21 +21,10 @@ const MoviesList = ({ movies }) => {
             />
             <h2>{title || name || original_title}</h2>
           </Link>
-        ))}
-      </li>
+        </li>
+      ))}
     </ul>
   );
-
-  // return (
-  //   <ul>
-  //       {movies.map(({id, title, name, original_title, poster_path}) => (
-  //           <Link state={{from: location}} key={id} to={`/movies/${id}`}><li>
-  //           <img src={poster_path?`https://image.tmdb.org/t/p/w300/${poster_path}` : defaultImg} alt={title || name || original_title}/>
-  //           <h2>{title || name || original_title}</h2>
-  //       </li></Link>
-  //       ))}
-  //   </ul>
-  // )
 };
 
 export default MoviesList;
