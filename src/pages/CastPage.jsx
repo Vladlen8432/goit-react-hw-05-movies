@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getCast } from 'services/Api';
+import { useParams } from 'react-router-dom';
 
-const CastPage = ({ movieId }) => {
+const CastPage = () => {
+  const { movieId } = useParams();
   const [cast, setCast] = useState([]);
 
   useEffect(() => {
