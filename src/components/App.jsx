@@ -1,8 +1,8 @@
 import { lazy } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes} from 'react-router-dom';
 import SharedLayout from './SharedLayout/SharedLayout';
 
-import MovieDetails from './MovieDetails/MovieDetails';
+import MovieDetails from './MovieDetails';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const CastPage = lazy(() => import('../pages/CastPage'));
@@ -26,6 +26,14 @@ export const App = () => {
     </Routes>
   );
 };
+
+// const MovieDetails = () => {
+//   return (
+//     <div>
+//       <Outlet />
+//     </div>
+//   );
+// };
 
 // const MovieDetails = () => {
 //   return (
