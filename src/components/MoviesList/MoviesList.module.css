@@ -1,0 +1,25 @@
+.moviesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+}
+
+.moviesListItem {
+  display: flex;
+  padding: 12px;
+}
+
+.movieImg {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.movieTitleLink {
+  text-decoration: none;
+  max-width: 240px;
+}
+
+.movieTitle {
+  color: #ccd0cf;
+}

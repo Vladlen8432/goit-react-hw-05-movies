@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.formInput {
+  width: 400px;
+  height: 38px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #9ba8ab;
+  border-radius: 100px;
+  outline: none;
+  color: #ccd0cf;
+}
+
+.formInput:focus {
+  border: 1px solid #ccd0cf;
+}
+
+.formButton {
+  background-color: #9ba8ab;
+  border: none;
+  border-radius: 100px;
+  width: 100px;
+  color: #06141b;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formButton:hover,
+.formButton:focus {
+  background-color: #ccd0cf;
+}

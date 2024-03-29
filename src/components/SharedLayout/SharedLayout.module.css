@@ -1,0 +1,25 @@
+.header {
+    background-color: #06141b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navigationList {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    font-size: 22px;
+}
+
+.navigationItem {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #9ba8ab;
+    transition: color 0.3s ease;
+}
+
+.navigationItem:hover,
+.navigationItem:focus {
+    color: #ccd0cf;
+}
