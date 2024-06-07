@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams, Outlet} from 'react-router-dom';
+import { Link, useParams, Outlet } from 'react-router-dom';
 import { getMovieDetails } from '../services/Api';
+import css from './styles.module.css';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -25,25 +26,33 @@ const MovieDetailsPage = () => {
   }
 
   return (
-    <div>
+    <div className={css.movieDetailsStyle}>
       {movieDetails ? (
-        <div>
-          <h2>{movieDetails.title}</h2>
+        <div className={css.containerMovieDetails}>
+          <h2 className={css.movieDetailsTitle}>{movieDetails.title}</h2>
           <img
+            className={css.movieDetailsImg}
             src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`}
             alt={movieDetails.title}
           />
-          <p>{movieDetails.overview}</p>
-          <p>Release Date: {movieDetails.release_date}</p>
-          <p>Vote Average: {movieDetails.vote_average}</p>
-          <p>Runtime: {movieDetails.runtime} minutes</p>
 
-          <ul>
+          <p className={css.movieDetailsDescr}>{movieDetails.overview}</p>
+          <p className={css.movieDetailsDescr}>
+            Release Date: {movieDetails.release_date}
+          </p>
+          <p className={css.movieDetailsDescr}>
+            Vote Average: {movieDetails.vote_average}
+          </p>
+          <p className={css.movieDetailsDescr}>
+            Runtime: {movieDetails.runtime} minutes
+          </p>
+
+          <ul className={css.castList}>
             <li>
-              <Link to={`/movies/${movieId}/cast`}>Cast</Link>
+              <Link className={css.castLink} to={`/movies/${movieId}/cast`}>Cast</Link>
             </li>
             <li>
-              <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+              <Link className={css.castLink} to={`/movies/${movieId}/reviews`}>Reviews</Link>
             </li>
           </ul>
           <Outlet />

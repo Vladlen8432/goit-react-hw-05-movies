@@ -1,7 +1,10 @@
 .header {
+    position: fixed;
+    width: 100%;
     background-color: #06141b;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 0;
 }
 
 .navigationList {

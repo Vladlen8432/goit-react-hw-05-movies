@@ -1,0 +1,39 @@
+/* Movie details */
+
+.movieDetailsStyle {
+  margin-top: 140px;
+  margin-left: 40px;
+}
+
+.movieDetailsTitle {
+  color: #ccd0cf;
+}
+
+.movieDetailsImg {
+  border-radius: 20px;
+}
+
+.movieDetailsDescr {
+  color: #ccd0cf;
+}
+
+.castList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.castLink {
+  text-decoration: none;
+  color: #9ba8ab;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.castLink:hover,
+.castLink:focus {
+  color: #ccd0cf;
+}
