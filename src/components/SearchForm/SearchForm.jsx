@@ -14,16 +14,20 @@ const SearchForm = ({ onHandleSubmit }) => {
     onHandleSubmit(query);
   };
   return (
-    <form className={css.form} onSubmit={handleSubmit} action="">
-      <input
-        className={css.formInput}
-        type="text"
-        value={query}
-        name="query"
-        onChange={handleChange}
-      />
-      <button className={css.formButton} type="submit">Search</button>
-    </form>
+    <div className={css.containerForm}>
+      <form className={css.form} onSubmit={handleSubmit} action="">
+        <input
+          className={css.formInput}
+          type="text"
+          value={query}
+          name="query"
+          onChange={handleChange}
+        />
+        <button className={css.formButton} type="submit">
+          Search
+        </button>
+      </form>
+    </div>
   );
 };
 

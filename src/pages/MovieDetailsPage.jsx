@@ -28,31 +28,41 @@ const MovieDetailsPage = () => {
   return (
     <div className={css.movieDetailsStyle}>
       {movieDetails ? (
-        <div className={css.containerMovieDetails}>
+        <div>
           <h2 className={css.movieDetailsTitle}>{movieDetails.title}</h2>
-          <img
-            className={css.movieDetailsImg}
-            src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`}
-            alt={movieDetails.title}
-          />
+          <div className={css.containerMoviesDetails}>
+            <div className={css.containerImg}>
+              <img
+                className={css.movieDetailsImg}
+                src={`https://image.tmdb.org/t/p/w300${movieDetails.poster_path}`}
+                alt={movieDetails.title}
+              />
+            </div>
 
-          <p className={css.movieDetailsDescr}>{movieDetails.overview}</p>
-          <p className={css.movieDetailsDescr}>
-            Release Date: {movieDetails.release_date}
-          </p>
-          <p className={css.movieDetailsDescr}>
-            Vote Average: {movieDetails.vote_average}
-          </p>
-          <p className={css.movieDetailsDescr}>
-            Runtime: {movieDetails.runtime} minutes
-          </p>
+            <div className={css.containerContent}>
+              <p className={css.movieDetailsDescr}>{movieDetails.overview}</p>
+              <p className={css.movieDetailsDescr}>
+                Release Date: {movieDetails.release_date}
+              </p>
+              <p className={css.movieDetailsDescr}>
+                Vote Average: {movieDetails.vote_average}
+              </p>
+              <p className={css.movieDetailsDescr}>
+                Runtime: {movieDetails.runtime} minutes
+              </p>
+            </div>
+          </div>
 
-          <ul className={css.castList}>
+          <ul className={css.castReviewsList}>
             <li>
-              <Link className={css.castLink} to={`/movies/${movieId}/cast`}>Cast</Link>
+              <Link className={css.castLink} to={`/movies/${movieId}/cast`}>
+                Cast
+              </Link>
             </li>
             <li>
-              <Link className={css.castLink} to={`/movies/${movieId}/reviews`}>Reviews</Link>
+              <Link className={css.castLink} to={`/movies/${movieId}/reviews`}>
+                Reviews
+              </Link>
             </li>
           </ul>
           <Outlet />
