@@ -26,9 +26,9 @@ const MovieDetailsPage = () => {
   }
 
   return (
-    <div className={css.movieDetailsStyle}>
+    <div className={css.movieDetailsStyleContainer}>
       {movieDetails ? (
-        <div>
+        <div className={css.movieDetailsStyle}>
           <h2 className={css.movieDetailsTitle}>{movieDetails.title}</h2>
           <div className={css.containerMoviesDetails}>
             <div className={css.containerImg}>

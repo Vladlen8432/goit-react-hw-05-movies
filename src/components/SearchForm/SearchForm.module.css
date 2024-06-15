@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   gap: 4px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .formInput {
@@ -50,6 +50,7 @@
 @media screen and (min-width: 768px) {
   .form {
     gap: 10px;
+    margin-top: 40px;
   }
 
   .formInput {
