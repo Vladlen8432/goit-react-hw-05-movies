@@ -1,36 +1,32 @@
 /* Movie details */
 
-.movieDetailsStyleContainer {
-  padding-left: 20px;
-  padding-right: 20px;
+.movieDetailsStyle {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.containerImg {
+.containerMoviesDetails {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.movieDetailsTitle {
-  text-align: center;
-  color: #ccd0cf;
-}
-
-.movieDetailsImg {
-  width: 100%;
-  border-radius: 20px;
-  height: auto;
+  gap: 20px;
 }
 
 .containerContent {
   padding: 20px;
   background-color: #253745;
   color: #ccd0cf;
-  height: auto;
+  height: 410px;
   max-width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  margin-top: 20px;
+}
+
+.movieDetailsTitle {
+  color: #ccd0cf;
+}
+
+.movieDetailsImg {
+  border-radius: 20px;
+  height: 450px;
 }
 
 .castReviewsList {
@@ -47,66 +43,11 @@
   color: #9ba8ab;
   font-weight: 600;
   transition: color 0.3s ease;
-
 }
 
 .castLink:hover,
 .castLink:focus {
   color: #ccd0cf;
-}
-
-@media screen and (min-width: 768px) {
-  .movieDetailsStyle {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .containerMoviesDetails {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .containerContent {
-    padding: 20px;
-    background-color: #253745;
-    color: #ccd0cf;
-    height: 410px;
-    max-width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .movieDetailsTitle {
-    text-align: left;
-    color: #ccd0cf;
-  }
-
-  .movieDetailsImg {
-    border-radius: 20px;
-    height: 450px;
-  }
-
-  .castReviewsList {
-    color: #ccd0cf;
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-
-  .castLink {
-    text-decoration: none;
-    color: #9ba8ab;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  .castLink:hover,
-  .castLink:focus {
-    color: #ccd0cf;
-  }
 }
 
 /* Cast page */
