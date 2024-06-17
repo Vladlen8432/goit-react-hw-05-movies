@@ -1,35 +1,62 @@
 /* Movie details */
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieDetailsStyleContainer {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 .movieDetailsStyle {
-  padding-left: 40px;
-  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .containerMoviesDetails {
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   gap: 20px;
 }
 
 .containerContent {
-  padding: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: #253745;
   color: #ccd0cf;
-  height: 410px;
-  max-width: 100%;
+  width: 100%;
   border-radius: 20px;
-  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.movieDetailsDescr {
+  display: block;
 }
 
 .movieDetailsTitle {
+  text-align: center;
   color: #ccd0cf;
 }
 
 .movieDetailsImg {
   border-radius: 20px;
-  height: 450px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.containerCastReviewsList {
+  display: flex;
+  justify-content: center;
 }
 
 .castReviewsList {
+  padding: 0;
+  margin-top: 20px;
   color: #ccd0cf;
   display: flex;
   gap: 20px;
@@ -50,6 +77,40 @@
   color: #ccd0cf;
 }
 
+@media screen and (min-width: 768px) {
+  .movieDetailsStyle {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .movieDetailsTitle {
+    text-align: start;
+  }
+
+  .containerMoviesDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .containerContent {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .movieDetailsImg {
+    width: 300px;
+    border-radius: 20px;
+    height: 450px;
+  }
+
+  .containerCastReviewsList {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 /* Cast page */
 
 .castTitle {
@@ -68,7 +129,7 @@
 }
 
 .castListItem {
-  width: 160px;
+  /* width: 160px; */
   display: flex;
   flex-direction: column;
   row-gap: 10px;

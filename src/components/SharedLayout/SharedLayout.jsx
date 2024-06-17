@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+
+import Loader from './Loader';
 import css from './SharedLayout.module.css';
 
 const SharedLayout = () => {
@@ -32,7 +34,7 @@ const SharedLayout = () => {
         </div>
       </header>
       <main>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

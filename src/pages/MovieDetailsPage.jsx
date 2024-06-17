@@ -11,7 +11,7 @@ const MovieDetailsPage = () => {
     const fetchMovieDetails = async () => {
       try {
         const details = await getMovieDetails(movieId);
-        console.log('Movie details from component:', details);
+        // console.log('Movie details from component:', details);
         setMovieDetails(details);
       } catch (error) {
         console.error('Error fetching movie details:', error);
@@ -53,18 +53,23 @@ const MovieDetailsPage = () => {
             </div>
           </div>
 
-          <ul className={css.castReviewsList}>
-            <li>
-              <Link className={css.castLink} to={`/movies/${movieId}/cast`}>
-                Cast
-              </Link>
-            </li>
-            <li>
-              <Link className={css.castLink} to={`/movies/${movieId}/reviews`}>
-                Reviews
-              </Link>
-            </li>
-          </ul>
+          <div className={css.containerCastReviewsList}>
+            <ul className={css.castReviewsList}>
+              <li className={css.castReviewsListItem}>
+                <Link className={css.castLink} to={`/movies/${movieId}/cast`}>
+                  Cast
+                </Link>
+              </li>
+              <li className={css.castReviewsListItem}>
+                <Link
+                  className={css.castLink}
+                  to={`/movies/${movieId}/reviews`}
+                >
+                  Reviews
+                </Link>
+              </li>
+            </ul>
+          </div>
           <Outlet />
         </div>
       ) : (
